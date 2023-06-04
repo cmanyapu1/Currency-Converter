@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Courrency Converter</title>
+  </head>
+  <body>
+    
+    
+    <form action="{{ url_for('results') }}" method="POST" id="currency_convert_form">
+        <div>
+            <label for="from"> Convertng From</label>
+            <div>
+                <input 
+                name="from" class="from" autofocus
+                id = "from"
+                type= text>
+        </div>
+    </div>
+        <div>
+            <label for="to"> Convertng To</label>
+            <div>
+                <input 
+                name="to" class="to" autofocus
+                id = "to"
+                type= text>
+        </div>
+    </div>
+    <div>
+        <label for="amount"> Amount</label>
+        <div>
+            <input 
+            name="amount" class="amount" autofocus
+            id = "amount"
+            type= number>
+    </div>
+</div>
+        
+            <button type="submit">Convert</button>
+          </form>
+
+     <!-- Error Messages -->
+
+      <p class="old">
+            <!-- our JS will put messages here dynamically -->
+          </p>
+      <p class="new">
+            <!-- our JS will put messages here dynamically -->
+          </p>
+      <p class="amount">
+            <!-- our JS will put messages here dynamically -->
+          </p>
+
+        </section>
+        <script src="http://unpkg.com/jquery"></script>
+        <script src="https://unpkg.com/axios@0.19.0/dist/axios.js"></script>
+        <script src="/converter.js"></script>
+
+      </body>
+    </html>
+    
